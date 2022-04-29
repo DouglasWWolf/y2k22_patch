@@ -1,25 +1,25 @@
-//                                                                                          #
-// Provided script will patch Xilinx Tools for the HLS Y2k22 bug                            #
-//                           Copyright (c) 2018 - 2022 Xilinx Inc.                          #
-// version: 1.2                                                                             #
-// The patch is intended to resolve the following error                                     #
-// source run_ippack.tcl -notrace                                                           #
-// ERROR: '##########' is an invalid argument. Please specify an integer value.             #
-// while executing                                                                          #
-// "rdi::set_property core_revision "##########"                                            #
-//                                                                                          #
-// {component component_1}                                                                  #
-// "                                                                                        #
-// invoked from within                                                                      #
-// "set_property core_revision $Revision $core"                                             #
-// (file "run_ippack.tcl" line 835)                                                         #
-//                                                                                          #
-// The root cause for the issue is in run_ippack.tcl called by export_ip.tcl.               #
-// set Revision "##########"                                                                # 
-// set_property core_revision $Revision $core                                               #
-//                                                                                          #  
-// For more information see:                                                                #
-// https://support.xilinx.com/s/article/76960                                               # 
+//                                                                                            
+// Provided script will patch Xilinx Tools for the HLS Y2k22 bug                              
+//                           Copyright (c) 2018 - 2022 Xilinx Inc.                            
+// version: 1.2                                                                               
+// The patch is intended to resolve the following error                                       
+// source run_ippack.tcl -notrace                                                             
+// ERROR: '##########' is an invalid argument. Please specify an integer value.               
+// while executing                                                                            
+// "rdi::set_property core_revision "##########"                                              
+//                                                                                            
+// {component component_1}                                                                    
+// "                                                                                          
+// invoked from within                                                                        
+// "set_property core_revision $Revision $core"                                               
+// (file "run_ippack.tcl" line 835)                                                           
+//                                                                                            
+// The root cause for the issue is in run_ippack.tcl called by export_ip.tcl.                 
+// set Revision "##########"                                                                  
+// set_property core_revision $Revision $core                                                 
+//                                                                                              
+// For more information see:                                                                  
+// https://support.xilinx.com/s/article/76960                                                  
 
 
 
