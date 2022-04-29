@@ -7,18 +7,9 @@
  source run_ippack.tcl -notrace                                                             
  ERROR: '##########' is an invalid argument. Please specify an integer value.               
  while executing "rdi::set_property core_revision "##########"                                              
-                                                                                            
- invoked from within                                                                        
- "set_property core_revision $Revision $core"                                               
- (file "run_ippack.tcl" line 835)                                                           
-                                                                                            
- The root cause for the issue is in run_ippack.tcl called by export_ip.tcl.                 
- set Revision "##########"                                                                  
- set_property core_revision $Revision $core                                                 
                                                                                               
  For more information see:                                                                  
  https://support.xilinx.com/s/article/76960                                                  
-
 
 
 Note: Provided zip file (y2k22_patch-1.2.zip) must be extracted to the installation root:
